@@ -15,7 +15,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <h4 class="font-weight-bold">PRODUK TERBARU</h4>
+                <h4 class="font-weight-bold">PRODUK KRESKA</h4>
                 <hr class="mb-5" style="border-top: 5px solid rgb(231 171 60);border-radius:.5rem">
             </div>
         </div>
