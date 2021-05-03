@@ -6,7 +6,7 @@
             <ul class="list-group">
                 
                 <router-link :to="{name: 'detail_category', params:{slug: category.slug}}" v-for="category in categories.slice(0,3)" :key="category.id" class="list-group-item shadow-sm font-weight-bold text-decoration-none text-dark">
-                    <img :src="category.image" style="width:35px"> {{ category.name }}
+                    <img :src="category.image" style="width:30px"> {{ category.name }}
                 </router-link>
                 
                 <router-link :to="{name: 'categories'}" class="list-group-item text-center active shadow-sm font-weight-bold text-decoration-none">LIHAT KATEGORI LAINNYA <i class="fa fa-long-arrow-alt-right"></i></router-link>
