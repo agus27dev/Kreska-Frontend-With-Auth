@@ -62,7 +62,7 @@
                                 </td>
                                 <td>:</td>
                                 <td>
-                                    Rp. {{ moneyFromat(detailOrder.grand_total) }}
+                                    Rp. {{ moneyFormat(detailOrder.grand_total) }}
                                 </td>
                             </tr>
                             <tr>
