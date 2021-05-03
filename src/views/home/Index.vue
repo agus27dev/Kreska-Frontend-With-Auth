@@ -37,7 +37,7 @@
                             </router-link>
 
                             <div class="discount mt-2" style="color: #999"><s>Rp. {{ moneyFormat(product.price) }}</s> 
-                                <span style="background-color: darkorange" class="badge badge-pill badge-success text-white">
+                                <span style="background-color: darkorange" class="badge badge-pill badge-success text-white ml-1">
                                     DISKON {{ product.discount }} %
                                 </span>
                             </div>
@@ -63,8 +63,8 @@
                             </div>
 
                             <div class="discount" style="color: #999; font-size:14.5px;"><s style="color: #999; font-size:14.5px;">Rp. {{ moneyFormat(product.price) }}</s> 
-                                <span class="badge badge-pill badge-secondary text-white ml-1" style="font-size:12px;">DISKON
-                                    {{ product.discount }} %
+                                <span class="badge badge-pill badge-secondary text-white ml-1" style="font-size:12px;">
+                                    DISKON {{ product.discount }} %
                                 </span>
                             </div>
 
