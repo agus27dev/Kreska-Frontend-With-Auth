@@ -23,27 +23,59 @@
         <div class="row">
 
             <div v-for="product in products" :key="product.id" class="col-md-3 col-6 mb-3">
-                <div class="card h-100 border-0 shadow rounded-md">
-                    <div class="card-img">
-                        <img :src="product.image"
-                            class="w-100"
-                            style="height: 15em;object-fit:cover;border-top-left-radius: .25rem;border-top-right-radius: .25rem;">
-                    </div>
-                    <div class="card-body">
-                        <router-link :to="{name: 'detail_product', params:{slug: product.slug }}" class="card-title font-weight-bold" style="font-size:18px; color:#000">
-                            {{ product.title }}
-                        </router-link>
 
-                        <div class="discount mt-2" style="color: #999"><s>Rp. {{ moneyFormat(product.price) }}</s> <span
-                                style="background-color: darkorange" class="badge badge-pill badge-success text-white">DISKON
-                                {{ product.discount }} %</span>
+                <div v-if="product.stock>0">
+                    <div class="card h-100 border-0 shadow rounded-md">
+                        <div class="card-img">
+                            <img :src="product.image"
+                                class="w-100"
+                                style="height: 15em;object-fit:cover;border-top-left-radius: .25rem;border-top-right-radius: .25rem;">
                         </div>
+                        <div class="card-body">
+                            <router-link :to="{name: 'detail_product', params:{slug: product.slug }}" class="card-title font-weight-bold" style="font-size:18px; color:#000">
+                                {{ product.title }}
+                            </router-link>
 
-                        <div class="price font-weight-bold mt-2" style="color: #ff8c00; font-size:18px">
-                            Rp. {{ moneyFormat(calculateDiscount(product)) }}</div>
-                        <router-link :to="{name: 'detail_product', params:{slug: product.slug}}" class="btn btn-primary btn-md mt-3 btn-block shadow-md">LIHAT PRODUK</router-link>
+                            <div class="discount mt-2" style="color: #999"><s>Rp. {{ moneyFormat(product.price) }}</s> 
+                                <span style="background-color: darkorange" class="badge badge-pill badge-success text-white">
+                                    DISKON {{ product.discount }} %
+                                </span>
+                            </div>
+
+                            <div class="price font-weight-bold mt-2" style="color: #ff8c00; font-size:18px">
+                                Rp. {{ moneyFormat(calculateDiscount(product)) }}
+                            </div>
+                            <router-link :to="{name: 'detail_product', params:{slug: product.slug}}" class="btn btn-primary btn-md mt-3 btn-block shadow-md">LIHAT PRODUK</router-link>
+                        </div>
                     </div>
                 </div>
+
+                <div v-else>
+                    <div class="card h-100 border-0 shadow rounded-md">
+                        <div class="card-img">
+                            <img :src="product.image"
+                                class="w-100"
+                                style="height: 15em; object-fit:cover; border-top-left-radius: .25rem; border-top-right-radius: .25rem; opacity: 0.4">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title font-weight-bold text-muted" style="font-size:18px; color:#000">
+                                {{ product.title }}
+                            </div>
+
+                            <div class="discount" style="color: #999; font-size:14.5px;"><s style="color: #999; font-size:14.5px;">Rp. {{ moneyFormat(product.price) }}</s> 
+                                <span class="badge badge-pill badge-secondary text-white ml-1" style="font-size:12px;">DISKON
+                                    {{ product.discount }} %
+                                </span>
+                            </div>
+
+                            <div class="price font-weight-bold mt-2 text-muted" style="color: #ff8c00; font-size:18px">
+                                Rp. {{ moneyFormat(calculateDiscount(product)) }}
+                            </div>
+                            <div class="btn btn-primary btn-md mt-3 btn-block shadow-md disabled" style="background-color:grey;">PRODUK HABIS</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
