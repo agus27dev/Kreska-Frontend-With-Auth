@@ -32,8 +32,8 @@
                             </div>
 
                             <div class="account">
-                                <router-link :to="{name: 'login'}" v-if="!isLoggedIn" class="btn search-button btn-md d-none d-md-block ml-4" style="color: #ffffff; border-color: #ffffff;"><i class="fa fa-user-circle"></i> ACCOUNT</router-link>
-                                <router-link :to="{name: 'dashboard'}" v-else class="btn search-button btn-md d-none d-md-block ml-4" style="color: #ffffff; border-color: #ffffff;"><i class="fa fa-tachometer-alt"></i> DASHBOARD </router-link>      
+                                <router-link :to="{name: 'login'}" v-if="!isLoggedIn" class="btn search-button btn-md d-none d-md-block ml-3" style="color: #ffffff; border-color: #ffffff;"><i class="fa fa-user-circle"></i> ACCOUNT</router-link>
+                                <router-link :to="{name: 'dashboard'}" v-else class="btn search-button btn-md d-none d-md-block ml-3" style="color: #ffffff; border-color: #ffffff;"><i class="fa fa-tachometer-alt"></i> DASHBOARD </router-link>      
                             </div>
 
                         </div>
