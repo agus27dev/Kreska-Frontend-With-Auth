@@ -73,7 +73,7 @@ const routes = [
         }
     },
     {
-        path: '/*',
+        path: '/:catchAll(.*)',
         name: '404',
         component: () => import(/* webpackChunkName: "404" */ '../views/404.vue'),
     },
