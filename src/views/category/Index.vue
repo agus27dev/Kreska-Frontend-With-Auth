@@ -6,7 +6,7 @@
                 <router-link :to="{name: 'detail_category', params:{slug: category.slug}}">
                     <div class="card h-100 border-0 rounded shadow">
                         <div class="card-body text-center">
-                            <img :src="category.image" style="width: 95px;">
+                            <img :src="category.image" style="width: 80px;">
                             <hr>
                             <label class="font-weight-bold" style="color: #000;">{{ category.name }}</label>
                         </div>
