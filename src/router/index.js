@@ -71,7 +71,12 @@ const routes = [
           //chek is loggedIn
           requiresAuth: true
         }
-    }
+    },
+    {
+        path: '/*',
+        name: '404',
+        component: () => import(/* webpackChunkName: "404" */ '../views/404.vue'),
+    },
 ]
 
 //create router
