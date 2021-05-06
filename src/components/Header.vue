@@ -65,14 +65,14 @@ import { useStore } from 'vuex'
             //cart count
             const cartCount = computed(() => {
 
-                //get getter "cartCount" dari module "auth"
+                //get getter "cartCount" dari module cart
                 return store.getters['cart/cartCount']
             })
 
             //cart total
             const cartTotal = computed(() => {
 
-                //get getter "cartTotal" dari module "auth"
+                //get getter "cartTotal" dari module cart
                 return store.getters['cart/cartTotal']
             })
 
