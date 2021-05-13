@@ -14,8 +14,8 @@
                         <label class="font-weight-bold" style="font-size: 24px;"> {{ product.title }} </label>
                         <hr>
                         <div class="price-product" id="price-product">
-                            <s class="font-weight-normal mr-3" style="font-size:16px; color: #999 text-decoration-color:red">Rp. {{ product.price }}</s>
-                            <span class="font-weight-bold" style="color: #ff8c00; font-size:20px;">Rp. {{ calculateDiscount(product) }}</span>
+                            <s class="font-weight-normal mr-3" style="font-size:16px; color: #999 text-decoration-color:red">Rp. {{ moneyFormat(product.price) }}</s>
+                            <span class="font-weight-bold" style="color: #ff8c00; font-size:20px;">Rp. {{ moneyFormat(calculateDiscount(product)) }}</span>
                         </div>
                         <table class="table table-borderless mt-3">
                             <tbody>
