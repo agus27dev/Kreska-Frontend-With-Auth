@@ -68,11 +68,14 @@
                     <h4 class="font-weight-bold">INFO</h4>
                     <hr style="border-top: 3px solid #fff;border-radius:.5rem">
                     
-                        <i class="fa fa-clock" style="display:flex"><p style="padding-left: 10px; font-weight: normal;">Jam Operasional : 07.00 - 17.00 WIB</p></i> 
-                                            
+                        <!-- <i class="fa fa-clock" style="display:flex"><p style="padding-left: 10px; font-weight: normal;">Jam Operasional : 07.00 - 17.00 WIB</p></i> 
+                                  
                         <i class="fa fa-map-marker" style="display:flex">
                             <p style="padding-left: 10px; font-weight: normal;"> Jl. A.M. Sangaji No.47, Cokrodiningratan, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta</p>
-                        </i> 
+                        </i>  -->
+                    <p style="color: #fff">
+                        Jam Operasional : 07.00 - 17.00 WIB, Jl. A.M. Sangaji No.47, Cokrodiningratan, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta
+                    </p>
                     
                 </div>
             </div>
